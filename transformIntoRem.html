@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<p>请输入从PS中测量的像素值：</p>
+	<input type="text" name="part">
+	<!--<p>请输入从PS中测量的屏幕宽度：</p>
+	<input type="text" name="total">
+	<p>请输入设备屏幕宽度：</p>
+	<input type="text" name="dev">
+	<p>请输入根元素大小：</p>
+	<input type="text" name="rootSize">
+	-->
+	<input type="button" name="transform" value="transform" />
+	
+	<p >你需要的rem值是：<span id="resultRem"></span></p>
+	
+
+	<script type="text/javascript">
+	function transform(){
+		var part=document.getElementsByName('part')[0].value;
+		/*var total=document.getElementsByName('total')[0].value;
+		var dev=document.getElementsByName('dev')[0].value;
+		var rootSize=document.getElementsByName('rootSize')[0].value;
+		var resultRem=part/total*dev/rootSize;*/
+		var resultRem=part/413*375/16;
+		document.getElementById("resultRem").innerHTML=resultRem;
+	}
+	document.getElementsByName('transform')[0].addEventListener('click',transform,false);
+	</script>
+</body>
+	
+</html>
